@@ -1,0 +1,12 @@
+package com.mytasks.wishlist.Repository;
+
+import com.mytasks.wishlist.Model.ListItem;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import java.util.List;
+
+@Repository
+public interface ListItemRepository extends JpaRepository<ListItem, Long>
+{
+    List<ListItem> findAllByOrderByCreatedAtDesc();
+}
