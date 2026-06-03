@@ -1,4 +1,15 @@
 package com.mytasks.wishlist.dto;
 
-public class CreateItemRequest {
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+public class CreateItemRequest
+{
+    private String description;
+
+    public String getDescription() {
+        return description;
+    }
 }
